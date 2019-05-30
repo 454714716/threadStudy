@@ -10,7 +10,7 @@ public class SemapDemo implements Runnable{
     public void run() {
         try {
             semp.acquire();
-            //Ä£ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+            //Ä£ÄâºÄÊ±²Ù×÷
             Thread.sleep(2000);
             System.out.println(Thread.currentThread().getId()+":done!");
         } catch (InterruptedException e) {

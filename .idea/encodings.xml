@@ -2,8 +2,12 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/src/DeadLock.java" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/src/chapter3/CountDownLatchDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/chapter3/CyclicBarrierDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/chapter3/ExtThreadPool.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/sync/AccountingVol.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/sync/InterruptThread.java" charset="ISO-8859-1" />
     <file url="file://$PROJECT_DIR$/src/sync/JoinMain.java" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

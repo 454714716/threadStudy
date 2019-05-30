@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 
 /**
- * Ê¹ï¿½Ã¼ï¿½ï¿½ß³Ì³Øºï¿½Ö±ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ß³ÌµÄ²ï¿½ï¿½
+ * Ê¹ÓÃ¼òµ¥Ïß³Ì³ØºÍÖ±½Ó¿ªÆôÏß³ÌµÄ²î±ð
  * @author Administrator
  *
  */

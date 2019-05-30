@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 public class AtomicRefrenceDemo {
 
-    //ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½Ü²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½áµ½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ÔËÐÐÖÐ¿ÉÄÜ²»»á³öÏÖÊéÖÐÌáµ½µÄÇé¿ö
     public static void main(String args[]) {
         final AtomicReference<Integer> money = new AtomicReference<Integer>();
         money.set(19);
@@ -19,11 +19,11 @@ public class AtomicRefrenceDemo {
                         Integer m = money.get();
                         if (m < 20) {
                             if (money.compareAndSet(m, m + 20)) {
-                                System.out.println("ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½20Ôª,ï¿½ï¿½Öµï¿½É¹ï¿½,ï¿½ï¿½ï¿½:" + money.get() + "Ôª");
+                                System.out.println("Óà¶îÐ¡ÓÚ20Ôª,³äÖµ³É¹¦,Óà¶î:" + money.get() + "Ôª");
                                 break;
                             }
                         } else {
-                            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½20,ï¿½ï¿½ï¿½ï¿½ï¿½Öµ");
+                            System.out.println("Óà¶î´óÓÚ20,ÎÞÐè³äÖµ");
                             break;
                         }
                     }
@@ -38,13 +38,13 @@ public class AtomicRefrenceDemo {
                     while (true) {
                         Integer m = money.get();
                         if (m > 10) {
-                            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½10Ôª");
+                            System.out.println("½ð¶î´óÓÚ10Ôª");
                             if (money.compareAndSet(m, m - 10)) {
-                                System.out.println("ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½10Ôª,ï¿½ï¿½ï¿½:" + money.get() + "Ôª");
+                                System.out.println("³É¹¦Ïû·Ñ10Ôª,Óà¶î:" + money.get() + "Ôª");
                                 break;
                             }
                         } else {
-                            System.out.println("Ã»ï¿½ï¿½ï¿½ã¹»ï¿½Ä½ï¿½ï¿½");
+                            System.out.println("Ã»ÓÐ×ã¹»µÄ½ð¶î");
                             break;
                         }
                     }

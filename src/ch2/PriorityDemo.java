@@ -9,7 +9,7 @@ public class PriorityDemo {
 
         public void run() {
             while (true) {
-                synchronized (PriorityDemo.class) {//О©╫к╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╢О©╫О©╫О©╫О©╫
+                synchronized (PriorityDemo.class) {//╢к╢╕╡ЗиЗвйт╢╬╨уЫ
                     count++;
                     if (count > 1000000) {
                         System.out.println("HightPriority is complete!");
@@ -25,7 +25,7 @@ public class PriorityDemo {
 
         public void run() {
             while (true) {
-                synchronized (PriorityDemo.class) {//О©╫к╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╢О©╫О©╫О©╫О©╫
+                synchronized (PriorityDemo.class) {//╢к╢╕╡ЗиЗвйт╢╬╨уЫ
                     count++;
                     if (count > 1000000) {
                         System.out.println("LowPriority is complete!");
@@ -38,7 +38,7 @@ public class PriorityDemo {
 
 
     /**
-     * О©╫О©╫О©╫О©╫О©╫х╪О©╫О©╫О©╫О©╫ъЁО©╫О©╫О©╫О©╫О©╫О©╫О©╫,О©╫О©╫О©╫г╡О©╫О©╫О©╫О©╫э╠О©╫ж╓ц©О©╫н╤О©╫О©╫О©╫LowPriorityО©╫О©╫О©╫О©╫О©╫,О©╫О©╫т╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫б╩О©╫О©╫г╩О©╫О©╫О©╫х╥О©╫О©╫О©╫О©╫О©╫х╪О©╫О©╫о╦ъ╣О©╫О©╫ъЁл╩О©╫О©╫О©╫О©╫т╢.
+     * ╣мсеох╪╤╣доъЁлохфТ╤╞,╣╚йг╡╒╡╩дэ╠ёж╓ц©╢н╤╪йгLowPriorityохмЙЁи,вйт╢╬╨уЫ╣дгИ©Жоб╩╧йг╩Аохх╥╠ёсеох╪╤╫о╦ъ╣доъЁл╩Я╣цвйт╢.
      *
      * @param args
      */

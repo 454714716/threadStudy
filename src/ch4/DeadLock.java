@@ -12,10 +12,10 @@ public class DeadLock extends Thread {
         this.tool = object;
 
         if (tool == fork1) {
-            this.setName("ï¿½ï¿½Ñ§ï¿½ï¿½A");
+            this.setName("ÕÜÑ§¼ÒA");
         }
         if (tool == fork2) {
-            this.setName("ï¿½ï¿½Ñ§ï¿½ï¿½B");
+            this.setName("ÕÜÑ§¼ÒB");
         }
     }
 
@@ -29,7 +29,7 @@ public class DeadLock extends Thread {
                 }
 
                 synchronized (fork2) {
-                    System.out.println("ï¿½ï¿½Ñ§ï¿½ï¿½Aï¿½ï¿½Ê¼ï¿½Ô·ï¿½ï¿½ï¿½");
+                    System.out.println("ÕÜÑ§¼ÒA¿ªÊ¼³Ô·¹ÁË");
                 }
             }
         }
@@ -42,7 +42,7 @@ public class DeadLock extends Thread {
                 }
 
                 synchronized (fork1) {
-                    System.out.println("ï¿½ï¿½Ñ§ï¿½ï¿½Bï¿½ï¿½Ê¼ï¿½Ô·ï¿½ï¿½ï¿½");
+                    System.out.println("ÕÜÑ§¼ÒB¿ªÊ¼³Ô·¹ÁË");
                 }
             }
         }
@@ -50,11 +50,11 @@ public class DeadLock extends Thread {
 
 
     public static void main(String args[]) throws InterruptedException {
-        DeadLock ï¿½ï¿½Ñ§ï¿½ï¿½A = new DeadLock(fork1);
-        DeadLock ï¿½ï¿½Ñ§ï¿½ï¿½B = new DeadLock(fork2);
+        DeadLock ÕÜÑ§¼ÒA = new DeadLock(fork1);
+        DeadLock ÕÜÑ§¼ÒB = new DeadLock(fork2);
 
-        ï¿½ï¿½Ñ§ï¿½ï¿½A.start();
-        ï¿½ï¿½Ñ§ï¿½ï¿½B.start();
+        ÕÜÑ§¼ÒA.start();
+        ÕÜÑ§¼ÒB.start();
 
         Thread.sleep(1000);
     }

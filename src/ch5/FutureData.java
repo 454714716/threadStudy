@@ -14,7 +14,7 @@ public class FutureData implements Data {
         }
         this.realData = realData;
         isReady = true;
-        notifyAll();//RealData锟窖撅拷锟斤拷注锟斤拷,通知getResult
+        notifyAll();//RealData已经被注入,通知getResult
     }
 
 

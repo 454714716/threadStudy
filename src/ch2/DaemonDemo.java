@@ -18,10 +18,10 @@ public class DaemonDemo {
     }
 
     /**
-     * threadï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ø»ï¿½ï¿½ß³ï¿½,ÏµÍ³ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½mainÎªï¿½Ã»ï¿½ï¿½ß³ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½mainï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½3ï¿½ï¿½ï¿½Ë³ï¿½Ê±,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½threadï¿½ï¿½ï¿½ï¿½Îªï¿½Ø»ï¿½ï¿½ß³ï¿½,
-     * mainï¿½ß³Ì½ï¿½ï¿½ï¿½ï¿½ï¿½,tï¿½ß³Ì»ï¿½ï¿½á²»Í£ï¿½Ä´ï¿½Ó¡,ï¿½ï¿½Ô¶Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+     * thread±»ÉèÖÃÎªÊØ»¤Ïß³Ì,ÏµÍ³ÖÐÖ»ÓÐÖ÷Ïß³ÌmainÎªÓÃ»§Ïß³Ì,Òò´ËÔÚmainÏß³ÌÐÝÃß3ÃëÍË³öÊ±,Õû¸ö³ÌÐòÒ²ËæÖ®½áÊø,Èç¹û²»°ÑÏß³ÌthreadÉèÖÃÎªÊØ»¤Ïß³Ì,
+     * mainÏß³Ì½áÊøºó,tÏß³Ì»¹»á²»Í£µÄ´òÓ¡,ÓÀÔ¶Ò²²»»á½áÊø.
      *
-     * tip:ï¿½ï¿½Ò»ï¿½ï¿½JavaÓ¦ï¿½ï¿½ï¿½ï¿½,Ö»ï¿½ï¿½ï¿½Ø»ï¿½ï¿½ß³ï¿½Ê±,Javaï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½Ë³ï¿½.
+     * tip:µ±Ò»¸öJavaÓ¦ÓÃÄÚ,Ö»ÓÐÊØ»¤Ïß³ÌÊ±,JavaÐéÄâ»ú¾Í»áÍË³ö.
      *
      * @param args
      * @throws InterruptedException

@@ -2,9 +2,9 @@ package ch6.simple;
 
 public class Worker extends Thread 
 {
-	//О©╫ъЁлЁО©╫
+	//оъЁлЁь
     private ThreadPool pool;
-    //О©╫О©╫О©╫О©╫
+    //хннЯ
     private Runnable target;   
     private boolean isShutDown = false;
     private boolean isIdle = false;
@@ -32,18 +32,18 @@ public class Worker extends Thread
             isIdle = false;
             if (target != null) 
             {
-            	// О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+            	// ткппхннЯ
                 target.run();  
             }
-            //О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+            //хннЯ╫АйЬак
             isIdle = true;
             try 
             {
-            	//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫Сё╛╡О©╫О©╫ь╠О©╫О©╫ъЁлёО©╫О©╫О©╫О©╫г╥О©╫О©╫О©╫О©╫ъЁлЁь©О©╫О©╫п╤О©╫О©╫О©╫
+            	//╦цхннЯ╫АйЬ╨Сё╛╡╩╧ь╠уоъЁлё╛╤Ьйг╥ехКоъЁлЁь©уоп╤сап
                 pool.repool(this);
                 synchronized (this) 
                 {
-                	//О©╫ъЁл©О©╫О©╫пёО©╫О©╫х╢О©╫О©╫б╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+                	//оъЁл©уопё╛╣х╢Щпб╣дхннЯ╣╫ю╢
                     wait();
                 }
             }
@@ -58,7 +58,7 @@ public class Worker extends Thread
     public synchronized void setTarget(Runnable newTarget)
     {
         target = newTarget; 
-        //О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ж╝О©╫О©╫м╗ж╙runО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╪ж╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+        //иХжцакхннЯж╝╨Сё╛м╗ж╙run╥╫╥╗ё╛©╙й╪ж╢ппуБ╦ЖхннЯ
         notifyAll();       
     }
     

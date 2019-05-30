@@ -24,7 +24,7 @@ public class CountTask extends RecursiveTask<Long>{
                 sum +=i;
             }
         }else{
-            //锟街筹拷100锟斤拷小锟斤拷锟斤拷
+            //分成100个小任务
             long step=(start+end)/100;
             ArrayList<CountTask> subTasks=new ArrayList<CountTask>();
             long pos=start;

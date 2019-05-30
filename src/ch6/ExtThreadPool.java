@@ -17,7 +17,7 @@ public class ExtThreadPool {
 
         @Override
         public void run() {
-            System.out.println("ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½" + ":Thread ID:" + Thread.currentThread().getId()
+            System.out.println("ÕýÔÚÖ´ÐÐ" + ":Thread ID:" + Thread.currentThread().getId()
                     + ",Task Name=" + name);
             try {
                 Thread.sleep(100);
@@ -33,17 +33,17 @@ public class ExtThreadPool {
                 new LinkedBlockingQueue<Runnable>()) {
             @Override
             protected void beforeExecute(Thread t, Runnable r) {
-                System.out.println("×¼ï¿½ï¿½Ö´ï¿½Ð£ï¿½" + ((MyTask) r).name);
+                System.out.println("×¼±¸Ö´ÐÐ£º" + ((MyTask) r).name);
             }
 
             @Override
             protected void afterExecute(Runnable r, Throwable t) {
-                System.out.println("Ö´ï¿½ï¿½ï¿½ï¿½É£ï¿½" + ((MyTask) r).name);
+                System.out.println("Ö´ÐÐÍê³É£º" + ((MyTask) r).name);
             }
 
             @Override
             protected void terminated() {
-                System.out.println("ï¿½ß³Ì³ï¿½ï¿½Ë³ï¿½");
+                System.out.println("Ïß³Ì³ØÍË³ö");
             }
 
         };

@@ -16,10 +16,10 @@ public class CyclicBarrierDemo {
 
         public void run() {
             try {
-                //ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                //µÈ´ýËùÓÐÊ¿±øµ½Æë
                 cyclic.await();
                 doWork();
-                //ï¿½È´ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½
+                //µÈ´ýËùÓÐÊ¿±øÍê³É¹¤×÷
                 cyclic.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -34,7 +34,7 @@ public class CyclicBarrierDemo {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(soldier + ":ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+            System.out.println(soldier + ":ÈÎÎñÍê³É");
         }
     }
 
@@ -48,9 +48,9 @@ public class CyclicBarrierDemo {
 
         public void run() {
             if (flag) {
-                System.out.println("Ë¾ï¿½ï¿½:[Ê¿ï¿½ï¿½" + N + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½]");
+                System.out.println("Ë¾Áî:[Ê¿±ø" + N + "¸ö£¬ÈÎÎñÍê³É£¡]");
             } else {
-                System.out.println("Ë¾ï¿½ï¿½:[Ê¿ï¿½ï¿½" + N + "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï£ï¿½]");
+                System.out.println("Ë¾Áî:[Ê¿±ø" + N + "¸ö£¬¼¯ºÏÍê±Ï£¡]");
                 flag = true;
             }
         }
@@ -61,11 +61,11 @@ public class CyclicBarrierDemo {
         Thread[] allSoldier=new Thread[N];
         boolean flag = false;
         CyclicBarrier cyclic = new CyclicBarrier(N, new BarrierRun(flag, N));
-        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµã£¬ï¿½ï¿½Òªï¿½ï¿½Îªï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-        System.out.println("ï¿½ï¿½ï¿½Ï¶ï¿½ï¿½é£¡");
+        //ÉèÖÃÆÁÕÏµã£¬Ö÷ÒªÊÇÎªÁËÖ´ÐÐÕâ¸ö·½·¨
+        System.out.println("¼¯ºÏ¶ÓÎé£¡");
         for (int i = 0; i < N; ++i) {
-            System.out.println("Ê¿ï¿½ï¿½ "+i+" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
-            allSoldier[i]=new Thread(new Soldier(cyclic, "Ê¿ï¿½ï¿½ " + i));
+            System.out.println("Ê¿±ø "+i+" ±¨µÀ£¡");
+            allSoldier[i]=new Thread(new Soldier(cyclic, "Ê¿±ø " + i));
             allSoldier[i].start();
             if(i==5){
              	allSoldier[0].interrupt();

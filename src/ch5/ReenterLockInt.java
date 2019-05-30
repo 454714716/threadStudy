@@ -9,7 +9,7 @@ public class ReenterLockInt implements Runnable {
 	public static ReentrantLock lock2 = new ReentrantLock();
 	int lock;
 	/**
-	 * ï¿½ï¿½ï¿½Æ¼ï¿½ï¿½ï¿½Ë³ï¿½ò£¬·ï¿½ï¿½ã¹¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * ¿ØÖÆ¼ÓËøË³Ğò£¬·½±ã¹¹ÔìËÀËø
 	 * @param lock
 	 */
 	public ReenterLockInt(int lock) {
@@ -40,7 +40,7 @@ public class ReenterLockInt implements Runnable {
 				lock1.unlock();
 			if (lock2.isHeldByCurrentThread())
 				lock2.unlock();
-			System.out.println(Thread.currentThread().getId()+":ï¿½ß³ï¿½ï¿½Ë³ï¿½");
+			System.out.println(Thread.currentThread().getId()+":Ïß³ÌÍË³ö");
 		}
 	}
 
@@ -51,7 +51,7 @@ public class ReenterLockInt implements Runnable {
 		Thread t2 = new Thread(r2);
 		t1.start();t2.start();
 		Thread.sleep(1000);
-		//ï¿½Ğ¶ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ß³ï¿½
+		//ÖĞ¶ÏÆäÖĞÒ»¸öÏß³Ì
 		DeadlockChecker.check();
 	}
 }

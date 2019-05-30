@@ -44,5 +44,5 @@ public class SimpleWaitAndNotify {
         thread2.start();
     }
 
-    //wait()锟斤拷锟斤拷锟斤拷锟酵凤拷目锟斤拷锟斤拷锟斤拷锟斤拷,锟斤拷Thread.sleep()锟斤拷锟斤拷锟斤拷锟斤拷锟酵凤拷锟轿猴拷锟斤拷源.
+    //wait()方法会释放目标对象的锁,而Thread.sleep()方法不会释放任何资源.
 }

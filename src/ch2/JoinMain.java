@@ -22,8 +22,8 @@ public class JoinMain {
 
         AddThread at = new AddThread();
         at.start();
-        at.join();//Ê¹ï¿½ï¿½join()ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ß³Ì»ï¿½È´ï¿½AddThreadÖ´ï¿½ï¿½ï¿½ï¿½ï¿½,iï¿½ï¿½ï¿½Îª1000000,ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,iï¿½ï¿½ï¿½Îª0
-        //ï¿½ï¿½ï¿½Ô²é¿´joinï¿½Äµ×²ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½Úµï¿½Ç°ï¿½ß³Ì¶ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ÏµÈ´ï¿½
+        at.join();//Ê¹ÓÃjoin()·½·¨ºó,Ö÷Ïß³Ì»áµÈ´ýAddThreadÖ´ÐÐÍê±Ï,iÊä³öÎª1000000,Èç¹ûÃ»ÓÐÕâÌõÓï¾ä,iÊä³öÎª0
+        //¿ÉÒÔ²é¿´joinµÄµ×²ã´úÂë,±¾ÖÊ¼´ÈÃµ÷ÓÃÏß³ÌÔÚµ±Ç°Ïß³Ì¶ÔÏóÊµÀýÉÏµÈ´ý
         System.out.println(i);
     }
 }

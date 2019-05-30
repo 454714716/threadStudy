@@ -7,21 +7,21 @@ import java.util.concurrent.FutureTask;
 
 public class FutureMain {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
-        //ï¿½ï¿½ï¿½ï¿½FutureTask
+        //¹¹ÔìFutureTask
         FutureTask<String> future = new FutureTask<String>(new RealData("a"));
         ExecutorService executor = Executors.newFixedThreadPool(1);
-        //Ö´ï¿½ï¿½FutureTaskï¿½ï¿½ï¿½àµ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğµï¿½ client.request("a") ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿ªï¿½ï¿½ï¿½ß³Ì½ï¿½ï¿½ï¿½RealDataï¿½ï¿½call()Ö´ï¿½ï¿½
+        //Ö´ĞĞFutureTask£¬Ïàµ±ÓÚÉÏÀıÖĞµÄ client.request("a") ·¢ËÍÇëÇó
+        //ÔÚÕâÀï¿ªÆôÏß³Ì½øĞĞRealDataµÄcall()Ö´ĞĞ
         executor.submit(future);
 
-        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        System.out.println("ÇëÇóÍê±Ï");
         try {
-        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½sleepï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ß¼ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
+        //ÕâÀïÒÀÈ»¿ÉÒÔ×ö¶îÍâµÄÊı¾İ²Ù×÷£¬ÕâÀïÊ¹ÓÃsleep´úÌæÆäËûÒµÎñÂß¼­µÄ´¦Àí
             Thread.sleep(2000);
         } catch (InterruptedException e) {
         }
-        //ï¿½àµ±ï¿½ï¿½data.getResult ()ï¿½ï¿½È¡ï¿½ï¿½call()ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½Öµ
-        //ï¿½ï¿½ï¿½ï¿½ï¿½Ê±call()ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½É£ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ï¿½È´ï¿½
-        System.out.println("ï¿½ï¿½ï¿½ï¿½ = " + future.get());
+        //Ïàµ±ÓÚdata.getResult ()£¬È¡µÃcall()·½·¨µÄ·µ»ØÖµ
+        //Èç¹û´ËÊ±call()·½·¨Ã»ÓĞÖ´ĞĞÍê³É£¬ÔòÒÀÈ»»áµÈ´ı
+        System.out.println("Êı¾İ = " + future.get());
     }
 }

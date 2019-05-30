@@ -6,19 +6,19 @@ package ch5;
 public class Main {
     public static void main(String args[]) {
         Client client = new Client();
-        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Îªï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½FutureDataï¿½ï¿½ï¿½ï¿½ï¿½ï¿½RealData
+        //ÕâÀï»áÁ¢¼´·µ»Ø,ÒòÎªµÃµ½µÄÊÇFutureData¶ø²»ÊÇRealData
         Data data = client.request("name");
-        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        System.out.println("ÇëÇóÍê±Ï");
 
         try {
 
-            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½sleepï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½ï¿½ï¿½ß¼ï¿½ï¿½Ä´ï¿½ï¿½ï¿½
-            //ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½Ğ©Òµï¿½ï¿½ï¿½ß¼ï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½,RealDataï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½Ó¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËµÈ´ï¿½Ê±ï¿½ï¿½
+            //ÕâÀïÓÃÒ»¸ösleep´úÌæÁË¶ÔÆäËûÒµÎñÂß¼­µÄ´¦Àí
+            //ÔÚ´¦ÀíÕâĞ©ÒµÎñÂß¼­µÄ¹ı³ÌÖĞ,RealData±»´´½¨,´Ó¶ø³ä·ÖÀûÓÃÁËµÈ´ıÊ±¼ä
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        //Ê¹ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-        System.out.println("ï¿½ï¿½ï¿½ï¿½=" + data.getResult());
+        //Ê¹ÓÃÕæÊµµÄÊı¾İ
+        System.out.println("Êı¾İ=" + data.getResult());
     }
 }

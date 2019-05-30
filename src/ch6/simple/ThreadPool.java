@@ -7,9 +7,9 @@ public class ThreadPool
 {
     private static ThreadPool instance = null;
 
-    //ï¿½ï¿½ï¿½Ðµï¿½ï¿½ß³Ì¶ï¿½ï¿½ï¿½
+    //¿ÕÏÐµÄÏß³Ì¶ÓÁÐ
     private List<Worker> idleThreads;
-    //ï¿½ï¿½ï¿½Ðµï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½
+    //ÒÑÓÐµÄÏß³Ì×ÜÊý
     private int threadCounter;
     private boolean isShutDown = false;
     
@@ -23,14 +23,14 @@ public class ThreadPool
         return threadCounter;
     }
     
-    //È¡ï¿½ï¿½ï¿½ß³Ì³Øµï¿½Êµï¿½ï¿½
+    //È¡µÃÏß³Ì³ØµÄÊµÀý
     public synchronized static ThreadPool getInstance() {
         if (instance == null)
             instance = new ThreadPool();
         return instance;
     }
    
-    //ï¿½ï¿½ï¿½ß³Ì·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //½«Ïß³Ì·ÅÈë³ØÖÐ
     protected synchronized void repool(Worker repoolingThread)
     {
         if (!isShutDown) 
@@ -39,11 +39,11 @@ public class ThreadPool
         }
         else 
         {
-            repoolingThread.shutDown();//ï¿½Ø±ï¿½ï¿½ß³ï¿½
+            repoolingThread.shutDown();//¹Ø±ÕÏß³Ì
         }
     }
         
-    //Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
+    //Í£Ö¹³ØÖÐËùÓÐÏß³Ì
     public synchronized void shutdown()
     {
        isShutDown = true;
@@ -54,26 +54,26 @@ public class ThreadPool
        }
     }
     
-    //Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    //Ö´ÐÐÈÎÎñ
     public synchronized void start(Runnable target)
     {
         Worker thread = null; 
-        //ï¿½ï¿½ï¿½ï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ß³Ì£ï¿½ï¿½ï¿½Ö±ï¿½ï¿½Ê¹ï¿½ï¿½
+        //Èç¹ûÓÐ¿ÕÏÐÏß³Ì£¬ÔòÖ±½ÓÊ¹ÓÃ
         if (idleThreads.size() > 0) 
         {
             int lastIndex = idleThreads.size() - 1;
             thread = (Worker) idleThreads.get(lastIndex);
             idleThreads.remove(lastIndex);
-            //ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            //Á¢¼´Ö´ÐÐÕâ¸öÈÎÎñ
             thread.setTarget(target);
         }
-        //Ã»ï¿½Ð¿ï¿½ï¿½ï¿½ï¿½ß³Ì£ï¿½ï¿½ò´´½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
+        //Ã»ÓÐ¿ÕÏÐÏß³Ì£¬Ôò´´½¨ÐÂÏß³Ì
         else 
         { 
             threadCounter++;
-            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³Ì£ï¿½
+            // ´´½¨ÐÂÏß³Ì£¬
             thread = new Worker(target, "PThread #" + threadCounter, this);
-            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½
+            //Æô¶¯Õâ¸öÏß³Ì
             thread.start();
         }
     }

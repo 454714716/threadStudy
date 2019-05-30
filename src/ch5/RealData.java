@@ -8,7 +8,7 @@ public class RealData implements Data {
     protected final String result;
 
     public RealData(String param) {
-        //RealDataï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Òªï¿½Ã»ï¿½ï¿½È´ï¿½ï¿½Ü¾ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sleepÄ£ï¿½ï¿½
+        //RealDataµÄ¹¹ÔìºÜÂı,ĞèÒªÓÃ»§µÈ´ıºÜ¾Ã,ÕâÀïÓÃsleepÄ£Äâ
         StringBuffer stringBuffer = new StringBuffer();
         for (int i = 0; i < 10; i++) {
             stringBuffer.append(param);

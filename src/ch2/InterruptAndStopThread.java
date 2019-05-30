@@ -11,7 +11,7 @@ public class InterruptAndStopThread {
             public void run() {
                 while (true) {
                     if (Thread.currentThread().isInterrupted()) {
-                        System.out.println("ï¿½Õµï¿½ï¿½Ð¶ï¿½ï¿½Åºï¿½,Í£Ö¹ï¿½ï¿½ï¿½ß³ï¿½!");
+                        System.out.println("ÊÕµ½ÖÐ¶ÏÐÅºÅ,Í£Ö¹¸ÃÏß³Ì!");
                         break;
                     }
                     try {
@@ -28,6 +28,6 @@ public class InterruptAndStopThread {
 
         thread.start();
         Thread.sleep(2000);
-        thread.interrupt();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶Ï²ï¿½ï¿½ï¿½
+        thread.interrupt();//½øÐÐÖÐ¶Ï²Ù×÷
     }
 }
